@@ -28,4 +28,4 @@ def main():
     birth_date = st.date_input("生年月日を選択してください")
 
     futures=get_future
-    st.write("あなたの来世は {reincarnation}です")
+    st.write("あなたの来世は {future}です")
