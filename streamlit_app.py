@@ -2,6 +2,7 @@
 import streamlit as st
 import random
 
+
 # ページ設定（タブに表示されるタイトル、表示幅）
 st.set_page_config(page_title="タイトル", layout="wide")
 
@@ -18,14 +19,8 @@ if st.button('挨拶する'):
     else:
         st.error('名前を入力してください。')  # エラーメッセージを表示
 st.caption("十字キー（左右）でも調整できます。")
-def get_future(birth_date):
-    futures =['鳥','魚','人間','猫']
 
-    random.seed(birth_date)
-    return random.choice(futures)
-    
-def main():
-    birth_date = st.date_input("生年月日を選択してください")
-
-    futures=get_future
-    st.write("あなたの来世は {future}です")
+birth_date = st.date_input("生年月日を選択してください")
+futures =['鳥','魚','人間','猫']
+future=random.choice(futures)
+st.write("あなたの来世は" + future + "です")
